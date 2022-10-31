@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7</title>
+</head>
+
+<body>
+    <script>
+        capital = 0
+        menorIdade = 0
+        for (i = 0; i <= 100; i++) {
+            // Sortar a procedência
+            let proc = Math.floor(Math.random() * 3 + 1);
+            proc -= 1
+            if (proc == 1) {
+                capital += 1
+            }
+            // Sortear a idade
+            let idade = Math.floor(Math.random() * 100)
+            if (idade < 18) {
+                menorIdade += 1
+            }
+        }
+        console.log(`Quantidade de pessoas vindas da capital: ${capital}.`);
+        console.log(`Percentual de pessoas menor de idade: ${menorIdade}%.`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+
+<body>
+    <script>
+        alunos = [[], [], []]
+        for (i = 0; i in alunos; i++) {
+            alunos[i].push(prompt(`Primeira nota do ${i + 1}º aluno: `))
+            alunos[i].push(prompt(`Segunda nota do ${i + 1}º aluno: `))
+        }
+
+        for (i = 0; i in alunos; i++) {
+            soma = 0
+            for (a = 0; a in alunos[i]; a++) {
+                soma += parseFloat(alunos[i][a])
+            }
+            let media = soma / 2
+            document.write(`Média do ${i + 1}º aluno: ${media}<br>`)
+        }
+    </script>
+</body>
+
+</html>

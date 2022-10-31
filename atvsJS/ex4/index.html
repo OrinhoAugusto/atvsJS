@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4</title>
+</head>
+<body>
+    <script>
+        let tipo
+        let custo = 0
+        let venda = 0
+        counter = 0
+
+        for (i = 1; i < 151; i++) {
+            produto = []
+            // Sortear o tipo do produto (C/V)
+            let bin = Math.round(Math.random())
+            if (bin == 0) {
+                tipo = "C"
+                counter += 1
+            } else {
+                tipo = "V"
+            }
+            // Sortear o valor de custo do produto (min=5, max=25)
+            custo = (Math.random() * 20).toFixed(2)
+            custo2 = parseFloat(custo) + 5
+
+            // Sortear o valor de venda do produto (min=25, max=40)
+            venda = (Math.random() * 15).toFixed(2)
+            venda2 = parseFloat(venda) + 25
+            
+            lucro = parseFloat(venda2) - parseFloat(custo2)
+
+            produto.push(tipo, custo2, venda2)
+            console.log(`Produto ${i}: tipo ${produto[0]}, custo ${produto[1].toFixed(2)}, venda ${produto[2].toFixed(2)}`);
+            console.log('Lucro: ' + lucro.toFixed(2))
+        }
+        console.log('Quantidade de produtos do tipo C (Calçado): ' + counter)
+    </script>
+</body>
+</html>

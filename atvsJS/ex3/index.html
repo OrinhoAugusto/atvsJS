@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    <script>
+        valores = []
+        dobrados = []
+        negativos = []
+        for (i = 1; i <= 10; i++) {
+            pedir = parseInt(prompt(`Digite o ${i}º número: `))
+            while (pedir == 0 || pedir == NaN) {
+                pedir = parseInt(prompt(`Este valor não é permitido. Digite o ${i}º número: `))
+            }
+            valores.push(pedir)
+        }
+    
+        for (i in valores) {
+            if (valores[i] > 0) {
+                let dobro = valores[i] * 2
+                dobrados.push(dobro)
+            }
+            else if (valores[i] < 0) {
+                negativos.push(valores[i])
+            }
+        }
+        console.log(valores);
+        console.log(dobrados);
+        console.log(negativos);
+    </script>
+</body>
+</html>

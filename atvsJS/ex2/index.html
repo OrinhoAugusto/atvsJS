@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2</title>
+</head>
+<body>
+    <script>
+        qnt = []
+        prc = []
+        maior = []
+
+            for (let y = 0; y < 5; y++) {
+                pro_qnt = prompt(`Quantidade do ${y + 1}º produto:`)
+                qnt.push(pro_qnt)
+            }
+
+            for (let x = 0; x < 5; x++) {
+                pro_prc = prompt(`Preço do ${x + 1}º produto:`)
+                prc.push(pro_prc)
+            }
+
+            for (let i = 0; i < 5; i++) {
+                var z = parseFloat(qnt[i] * prc[i])
+                document.write(`Valor do ${i + 1}º produto: ${z}<br><br>`)
+                if (z > 100) {
+                    maior.push(z)
+                }
+            }
+
+            document.write(`Produtos que custaram mais que 100 reais:<br>`)
+
+            for (i in maior) {
+                document.write(`<br>${parseFloat(i) + 1}<br>`)
+            }
+
+    </script>
+</body>
+</html>
